@@ -15,30 +15,30 @@ from strong_reject.jailbreaks import (
 )
 jailbreaks_for_eval = [
     "rot_13",
-    # "disemvowel",
-    # "gcg_transfer_harmbench",
-    # "gcg_transfer_universal_attacks",
-    # "combination_3",
-    # "combination_2",
-    # "few_shot_json",
-    # "dev_mode_v2",
-    # "dev_mode_with_rant",
-    # "wikipedia_with_title",
-    # "distractors",
-    # "wikipedia",
-    # "style_injection_json",
-    # "style_injection_short",
-    # "refusal_suppression",
-    # "prefix_injection",
-    # "distractors_negated",
-    # "poems",
-    # "base64",
-    # "base64_raw",
-    # "base64_input_only",
-    # "base64_output_only",
-    # "evil_confidant",
-    # "none",
-    # "aim"
+    "disemvowel",
+    "gcg_transfer_harmbench",
+    "gcg_transfer_universal_attacks",
+    "combination_3",
+    "combination_2",
+    "few_shot_json",
+    "dev_mode_v2",
+    "dev_mode_with_rant",
+    "wikipedia_with_title",
+    "distractors",
+    "wikipedia",
+    "style_injection_json",
+    "style_injection_short",
+    "refusal_suppression",
+    "prefix_injection",
+    "distractors_negated",
+    "poems",
+    "base64",
+    "base64_raw",
+    "base64_input_only",
+    "base64_output_only",
+    "evil_confidant",
+    "none",
+    "aim"
 ]
 registered_jailbreaks_for_eval = {}
 
@@ -63,7 +63,8 @@ def main():
         dataset = load_strongreject()
         jailbreaks = registered_jailbreaks_for_eval
         models = (
-            "Qwen/Qwen2-7B-Instruct"
+            "Qwen/Qwen2-7B-Instruct",
+            "allenai/OLMo-2-1124-7B-SFT"
         )
         max_tokens = 512
 
