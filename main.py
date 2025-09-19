@@ -63,7 +63,7 @@ def main():
         dataset = load_strongreject()
         jailbreaks = registered_jailbreaks_for_eval
         models = (
-            "huggingface/Qwen/Qwen2-7B-Instruct",
+            "huggingface/Qwen/Qwen2.5-7B-Instruct",
             "huggingface/allenai/OLMo-2-1124-7B-SFT"
         )
         max_tokens = 512
