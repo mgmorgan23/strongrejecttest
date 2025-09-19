@@ -74,9 +74,9 @@ def main():
         model_dataset = generate_to_dataset(
             dataset, models=[model], target_column="jailbroken_prompt", max_tokens=max_tokens
         )
-        model_dataset.to_json(str(DATA_DIR / "interim" / f"responses_{model}.json"))
+        model_dataset.to_json(str(DATA_DIR + "/interim" + f"/responses_{model}.json"))
         model_dataset = evaluate_dataset(model_dataset, ["strongreject_finetuned"])
-        model_dataset.to_json(str(DATA_DIR / "interim" / f"evals_{model}.json"))
+        model_dataset.to_json(str(DATA_DIR + "/interim" + f"/evals_{model}.json"))
         datasets.append(model_dataset)
 
     return concatenate_datasets(datasets)
@@ -91,4 +91,4 @@ if __name__ == "__main__":
         filename = "evals_test.json"
 
     dataset = main()
-    dataset.to_json(str(DATA_DIR / "interim" / filename))
+    dataset.to_json(str(DATA_DIR +"/interim/"+ filename))
