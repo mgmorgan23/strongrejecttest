@@ -68,7 +68,7 @@ def main():
         max_tokens = 512
 
     dataset = apply_jailbreaks_to_dataset(dataset, jailbreaks)
-    dataset.to_json(str(DATA_DIR / "interim" / "jailbreaks.json"))
+    dataset.to_json(str(DATA_DIR + "/interim/" + "jailbreaks.json"))
     datasets = []
     for model in models:
         model_dataset = generate_to_dataset(
