@@ -30,3 +30,4 @@ transformers>=4.51.3,<=4.53.2
 fschat>=0.2.36
 peft>=0.11.1
 tenacity>=8.4.1
+strong_reject==git+https://github.com/dsbowen/strong_reject.git@main
