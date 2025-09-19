@@ -14,6 +14,7 @@ from strong_reject.jailbreaks import (
     registered_jailbreaks,
 )
 jailbreaks_for_eval = [
+    "pap_evidence_based_persuasion",
     "rot_13",
     "disemvowel",
     "gcg_transfer_harmbench",
