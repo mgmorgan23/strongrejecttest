@@ -14,7 +14,6 @@ from strong_reject.jailbreaks import (
     registered_jailbreaks,
 )
 jailbreaks_for_eval = [
-    "pap_evidence_based_persuasion",
     "rot_13",
     "disemvowel",
     "gcg_transfer_harmbench",
@@ -50,7 +49,7 @@ DATA_DIR = "/results"
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--test", action="store_true")
-
+os.environ["HOSTED_VLLM_API_BASE"]
 
 def main():
     if os.getenv("TESTING"):
@@ -64,8 +63,8 @@ def main():
         dataset = load_strongreject()
         jailbreaks = registered_jailbreaks_for_eval
         models = (
-            "huggingface/Qwen/Qwen2.5-7B-Instruct",
-            "huggingface/allenai/OLMo-2-1124-7B-SFT"
+            "hosted_vllm/Qwen/Qwen2.5-7B-Instruct",
+            # "hosted_vllm/allenai/OLMo-2-1124-7B-SFT"
         )
         max_tokens = 512
 
