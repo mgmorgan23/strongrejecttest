@@ -49,7 +49,7 @@ DATA_DIR = "/results"
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--test", action="store_true")
-os.environ["HOSTED_VLLM_API_BASE"] = "http://neptune-cs-aus-267.reviz.ai2.in:8001/v1"
+os.environ["HOSTED_VLLM_API_BASE"] = "http://neptune-cs-aus-265.reviz.ai2.in:8001/v1"
 
 def main():
     if os.getenv("TESTING"):
@@ -63,8 +63,8 @@ def main():
         dataset = load_strongreject()
         jailbreaks = registered_jailbreaks_for_eval
         models = (
-            "hosted_vllm/Qwen/Qwen2.5-7B-Instruct",
-            # "hosted_vllm/allenai/OLMo-2-1124-7B-SFT"
+            # "hosted_vllm/Qwen/Qwen2.5-7B-Instruct",
+            "hosted_vllm/allenai/OLMo-2-1124-7B-SFT"
         )
         max_tokens = 512
 
