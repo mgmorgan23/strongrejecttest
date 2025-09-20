@@ -64,7 +64,7 @@ def main():
         jailbreaks = registered_jailbreaks_for_eval
         models = (
             # "hosted_vllm/Qwen/Qwen2.5-7B-Instruct",
-            "hosted_vllm/allenai/OLMo-2-1124-7B-SFT"
+            "hosted_vllm/allenai/OLMo-2-1124-7B-SFT",
         )
         max_tokens = 512
 
