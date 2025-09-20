@@ -49,7 +49,7 @@ DATA_DIR = "/results"
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--test", action="store_true")
-os.environ["HOSTED_VLLM_API_BASE"]
+os.environ["HOSTED_VLLM_API_BASE"] = "http://neptune-cs-aus-267.reviz.ai2.in:8001/v1"
 
 def main():
     if os.getenv("TESTING"):

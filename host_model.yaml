@@ -1,6 +1,6 @@
 version: v2
 budget: ai2/oe-adapt
-description: "VLLM Server for general verifier"
+description: "VLLM Server for strong reject"
 tasks:
   - name: "vllm-job"
     image:
@@ -24,9 +24,10 @@ tasks:
           weka: oe-adapt-default
     constraints:
       cluster:
-        - ai2/saturn-cirrascale
+        - ai2/saturn
+        - ai2/neptune
     resources:
       gpuCount: 1
     context:
-      priority: normal
+      priority: high
       preemptible: False
