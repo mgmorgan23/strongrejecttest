@@ -32,3 +32,4 @@ peft>=0.11.1
 tenacity>=8.4.1
 strong_reject @ git+https://github.com/dsbowen/strong_reject.git@main
 lm_eval==0.4.9.1
+lm_eval[vllm]
